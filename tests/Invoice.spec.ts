@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test('Tax Invoice for pne item', async ({page}) => {
+test('Tax Invoice with one item - edit price and qty then submit successfully', async ({page}) => {
     //Go-to- Invoice-Pacel
     await page.goto('https://ui-sandbox-omega.vercel.app/invoice')
     // Select Document type
