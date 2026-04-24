@@ -110,6 +110,13 @@ test('Tax Invoice with one item - edit price and qty then submit successfully', 
     await expect(page.getByTestId('summary-vat')).toHaveText('1,260.00')
     // 27. Verify Grand total Price to be 19,260.00
     await expect(page.getByTestId('summary-grand-total')).toHaveText('19,260.00')
+       // Click Submit Document Button
+       await page.getByTestId('submit-button').click()
+       // ตรวจสอบ url Invoice Succsee
+     await expect(page).toHaveURL('https://ui-sandbox-omega.vercel.app/invoice/success');
+       // 7. ตรวจสอบข้อความบนหน้าเว็บ 
+     await expect(page.getByTestId('success-heading')).toHaveText('Submit Invoice Successful')
+
     
    })
    
