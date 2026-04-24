@@ -35,5 +35,5 @@ test('Error Shiping From แสดงถูกต้อง', async ({ page }) =>
   await expect(page.getByTestId('shipping-form-address-error')).toHaveText('Address is required.')
   await expect(page.getByTestId('shipping-form-province-error')).toHaveText('Please select a province.')
   await expect(page.getByTestId('shipping-form-district-error')).toHaveText('Please select a district.')
-  await expect(page.getByTestId('shipping-form-subdistrict-select')).toHaveText('Please select a subdistrict.')
+  await expect(page.getByTestId('shipping-form-subdistrict-error')).toHaveText('Please select a subdistrict.')
 })
