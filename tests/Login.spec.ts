@@ -4,7 +4,7 @@ test('Login Success', async ({ page }) => {
   // 1. เปิด browser
   // 2. navigate ไปหน้า login
   await page.goto('https://ui-sandbox-omega.vercel.app');
-  await page.getByRole('link', { name: 'Login Form Practice login' }).click()
+  await page.getByRole('link', { name: 'Login Form' }).click()
 
   // 3. กรอก email
   const emailInput = page.getByTestId('email-input')
